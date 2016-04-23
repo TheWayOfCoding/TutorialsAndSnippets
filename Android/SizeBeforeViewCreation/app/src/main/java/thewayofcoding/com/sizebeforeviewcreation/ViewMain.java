@@ -1,15 +1,3 @@
-package thewayofcoding.com.sizebeforeviewcreation;
-
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.Path;
-import android.graphics.Point;
-import android.graphics.Rect;
-import android.view.View;
-
 /*
 By: Scott Waldron
 TheWayOfCoding.com
@@ -36,6 +24,19 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
  */
+
+package thewayofcoding.com.sizebeforeviewcreation;
+
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Path;
+import android.graphics.Point;
+import android.graphics.Rect;
+import android.view.View;
+
 public class ViewMain extends View {
     Paint textPaint = new Paint();
     Rect messageBounds = new Rect();

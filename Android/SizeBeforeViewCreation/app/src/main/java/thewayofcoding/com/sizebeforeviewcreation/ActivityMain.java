@@ -1,14 +1,3 @@
-package thewayofcoding.com.sizebeforeviewcreation;
-
-import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.graphics.Point;
-import android.graphics.Rect;
-import android.os.Build;
-import android.os.Bundle;
-import android.view.ViewTreeObserver;
-import android.widget.LinearLayout;
-
 /*
 By: Scott Waldron
 TheWayOfCoding.com
@@ -35,6 +24,17 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
  */
+
+package thewayofcoding.com.sizebeforeviewcreation;
+
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.graphics.Point;
+import android.os.Build;
+import android.os.Bundle;
+import android.view.ViewTreeObserver;
+import android.widget.LinearLayout;
+
 public class ActivityMain extends Activity {
     LinearLayout mLinearLayout;
     ViewMain mainView;
@@ -52,7 +52,7 @@ public class ActivityMain extends Activity {
         //instantiate our custom view
         mainView = new ViewMain(this);
 
-        //clean up the layout if needed and pust our custom view into it
+        //clean up the layout if needed and push our custom view into it
         mLinearLayout.removeAllViews();
         mLinearLayout.addView(mainView);
 
