@@ -1,9 +1,10 @@
-package thewayofcoding.com.sizebeforeviewcreation;
+package thewayofcoding.com.simplegamedrawloop;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.graphics.Point;
 import android.os.Build;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.ViewTreeObserver;
 import android.widget.LinearLayout;
@@ -13,9 +14,9 @@ By: Scott Waldron
 TheWayOfCoding.com
 
 - All resources retain copyright (bitmaps, etc).
-- You are not allowed to use these projects
+- You are not allowed to use these projects 
 as tutorials or samples distributed with your own branding.
-Basically, any use with the same theme as they were
+Basically, any use with the same theme as they were 
 intended for with TheWayOfCoding.com is not allowed.
 
 Source code License (excluding the above restrictions):
@@ -52,7 +53,7 @@ public class ActivityMain extends Activity {
         mLinearLayout = (LinearLayout)findViewById(R.id.layoutlinearmain);
 
         //instantiate our custom view
-        mainView = new ViewMain(this);
+        mainView = new ViewMain(this, this);
 
         //clean up the layout if needed and push our custom view into it
         mLinearLayout.removeAllViews();
