@@ -34,12 +34,12 @@ SOFTWARE.
 //a function to test async capability of our AsyncManager prototype
 function getAsyncTimestamp() {
 	//define our request to the server script
-    var postDataArray = new Array(2);
-    postDataArray[0] = 'action';
-    postDataArray[1] = 'get-timestamp';
+	var postDataArray = new Array(2);
+	postDataArray[0] = 'action';
+	postDataArray[1] = 'get-timestamp';
 
-    //get the needed information
-    new AsyncManager('statusdiv', 
+	//get the needed information
+	new AsyncManager('statusdiv', 
 		getAsyncTimestamp_callback, 
 		'asyncreceiver.php', 
 		postDataArray); 
@@ -61,16 +61,16 @@ function getAsyncTimestamp_callback(xmlDataReturned) {
 function getAsyncRandomNumber() {
 	//define our request to the server script
 	//this time we have two more parameters
-    var postDataArray = new Array(6);
-    postDataArray[0] = 'action';
-    postDataArray[1] = 'get-random-int';
+	var postDataArray = new Array(6);
+	postDataArray[0] = 'action';
+	postDataArray[1] = 'get-random-int';
 	postDataArray[2] = 'range-bottom';
-    postDataArray[3] = '10';
+	postDataArray[3] = '10';
 	postDataArray[4] = 'range-top';
-    postDataArray[5] = '40';
+	postDataArray[5] = '40';
 
-    //get the needed information
-    new AsyncManager('statusdiv', 
+	//get the needed information
+	new AsyncManager('statusdiv', 
 		getAsyncRandomNumber_callback, 
 		'asyncreceiver.php', 
 		postDataArray); 
