@@ -146,9 +146,6 @@ public class ViewMain extends View {
 
         //-----------------------------------------------------------------------------------------
 
-        //clear the screen
-        canvas.drawColor(Color.BLACK);
-
         //draw our clouds graphic, filling the entire view
         canvas.drawBitmap(cloudsBitmap, cloudSourceDimensions, cloudDestinationDimensions, null);
 

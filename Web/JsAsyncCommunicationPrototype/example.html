@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>AsyncManager Test Page</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="AsyncManager.js"></script>
+		<script type="text/javascript" src="example.js"></script>
+		
+		<style type="text/css">
+			body {
+				font-size: 1.5em;
+			}
+			
+			.divminheight {
+				height: 2em;
+				font-size: 2em;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="">
+			<div id="statusdiv" class="divminheight"></div>
+			<br />
+			<div>
+				Test Action 1 (server timestamp):<br />
+				<input type="button" id="button1" value="Get Timestamp" onclick="getAsyncTimestamp();" /><br />
+				<div id="divtimestampresult"  class="divminheight"></div>
+			</div>
+			<br />&nbsp;<br />
+			<div>
+				Test Action 2 (random number):<br />
+				<input type="button" id="button2" value="Get Random Number" onclick="getAsyncRandomNumber();" /><br />
+				<div id="divrandomnumberresult"  class="divminheight"></div>
+			</div>
+		</form>
+	</body>
+</html>
