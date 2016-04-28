@@ -31,12 +31,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-var asyncConnectionTimestamp;
-var asyncConnectionRandomNumber;
-
 //a function to test async capability of our AsyncManager prototype
-function getAsyncTimestamp()
-{
+function getAsyncTimestamp() {
 	//define our request to the server script
     var postDataArray = new Array(2);
     postDataArray[0] = 'action';
@@ -48,15 +44,12 @@ function getAsyncTimestamp()
 		'asyncreceiver.php', 
 		postDataArray); 
 }
-function getAsyncTimestamp_callback(xmlDataReturned)
-{
+function getAsyncTimestamp_callback(xmlDataReturned) {
 	//called once getAsyncTimestamp() gets a response back from the script
 	//extract the expected response tag
-	if(xmlDataReturned != null)
-	{
+	if(xmlDataReturned != null) {
 		var returnedValue = xmlDataReturned.getElementsByTagName('responsedata')[0].childNodes[0].nodeValue;
-		if(returnedValue != null)
-		{
+		if(returnedValue != null) {
 		  document.getElementById('divtimestampresult').innerHTML = returnedValue;
 		}
 	} else {
@@ -65,8 +58,7 @@ function getAsyncTimestamp_callback(xmlDataReturned)
 }
 
 //a function to test async capability of our AsyncManager prototype
-function getAsyncRandomNumber()
-{
+function getAsyncRandomNumber() {
 	//define our request to the server script
 	//this time we have two more parameters
     var postDataArray = new Array(6);
@@ -87,11 +79,9 @@ function getAsyncRandomNumber_callback(xmlDataReturned)
 {
 	//called once getAsyncRandomNumber() gets a response back from the script
 	//extract the expected response tag
-	if(xmlDataReturned != null)
-	{
+	if(xmlDataReturned != null) {
 		var returnedValue = xmlDataReturned.getElementsByTagName('responsedata')[0].childNodes[0].nodeValue;
-		if(returnedValue != null)
-		{
+		if(returnedValue != null) {
 		  document.getElementById('divrandomnumberresult').innerHTML = returnedValue;
 		} else {
 			document.getElementById('statusdiv').innerHTML = "There was an issue with the response.";
