@@ -112,6 +112,7 @@
             this.Name = "frmBackgroundWorkerExample";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Background Worker Example - TheWayOfCoding.com";
+            this.Load += new System.EventHandler(this.frmBackgroundWorkerExample_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbLoadingGraphic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

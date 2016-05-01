@@ -12,6 +12,11 @@ namespace BackgroundWorkerExample
 {
     public partial class frmBackgroundWorkerExample : Form
     {
+        public frmBackgroundWorkerExample()
+        {
+            InitializeComponent();
+        }
+
         public enum CurrentStatus
         {
             None,
@@ -21,12 +26,7 @@ namespace BackgroundWorkerExample
             Success,
             Busy
         }
-
-        public frmBackgroundWorkerExample()
-        {
-            InitializeComponent();
-        }
-
+        
         //used throughout the form to track application status
         CurrentStatus processingStatus = CurrentStatus.None;
 
@@ -96,7 +96,7 @@ namespace BackgroundWorkerExample
         /// <param name="worker">the worker</param>
         /// <param name="e">worker status</param>
         /// <returns>used to tell the caller to exit or not</returns>
-        bool isWorkerBeingCanceled(BackgroundWorker worker, DoWorkEventArgs e)
+        bool isWorkerBeingCancelled(BackgroundWorker worker, DoWorkEventArgs e)
         {
             bool returnValue = false;
 
@@ -120,27 +120,27 @@ namespace BackgroundWorkerExample
             BackgroundWorker worker = sender as BackgroundWorker;
 
             //mimic work and update or cancel the worker as we go
-            if (isWorkerBeingCanceled(worker, e)) return; //check for user cancel
+            if (isWorkerBeingCancelled(worker, e)) return; //check for user cancel
             worker.ReportProgress(20);
             System.Threading.Thread.Sleep(250);
 
             //mimic work and update or cancel the worker as we go
-            if (isWorkerBeingCanceled(worker, e)) return; //check for user cancel
+            if (isWorkerBeingCancelled(worker, e)) return; //check for user cancel
             worker.ReportProgress(40);
             System.Threading.Thread.Sleep(250);
 
             //mimic work and update or cancel the worker as we go
-            if (isWorkerBeingCanceled(worker, e)) return; //check for user cancel
+            if (isWorkerBeingCancelled(worker, e)) return; //check for user cancel
             worker.ReportProgress(60);
             System.Threading.Thread.Sleep(250);
 
             //mimic work and update or cancel the worker as we go
-            if (isWorkerBeingCanceled(worker, e)) return; //check for user cancel
+            if (isWorkerBeingCancelled(worker, e)) return; //check for user cancel
             worker.ReportProgress(80);
             System.Threading.Thread.Sleep(250);
 
             //mimic work and update or cancel the worker as we go
-            if (isWorkerBeingCanceled(worker, e)) return; //check for user cancel
+            if (isWorkerBeingCancelled(worker, e)) return; //check for user cancel
             worker.ReportProgress(100);
             System.Threading.Thread.Sleep(250);
 
@@ -191,6 +191,11 @@ namespace BackgroundWorkerExample
         private void btnStopWorker_Click(object sender, EventArgs e)
         {
             bwInstance.CancelAsync();
+        }
+
+        private void frmBackgroundWorkerExample_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
