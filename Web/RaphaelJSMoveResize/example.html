@@ -36,10 +36,12 @@
 		this.oy = this.attr('y');
 		this.attr({opacity: 0.5});
 		
+		//the resizer box
 		this.resizer.ox = this.resizer.attr('x');
 		this.resizer.oy = this.resizer.attr('y');
 		this.resizer.attr({opacity: 0.5});
 		
+		//the box text
 		this.boxtext.ox = this.attr('x') + (parseInt(this.attr('width')) / 2);
 		this.boxtext.oy = this.attr('y') + (parseInt(this.attr('height')) / 2);
 		this.boxtext.attr({opacity: 0.5});
@@ -69,9 +71,11 @@
 		this.ox = this.attr('x');
 		this.oy = this.attr('y');        
 		
+		//the resizer box
 		this.resizer.ow = this.resizer.attr('width');
 		this.resizer.oh = this.resizer.attr('height'); 
 		
+		//the box text
 		this.boxtext.ox = this.resizer.attr('x') + (parseInt(this.resizer.attr('width')) / 2);
 		this.boxtext.oy = this.resizer.attr('y') + (parseInt(this.resizer.attr('height')) / 2);
 	};
@@ -115,7 +119,7 @@
 			textx = px + (pw / 2);
 			texty = py + (ph / 2);
 
-			//deal with this individual machine, position it and show a status based on color
+			//deal with this individual box, position it and show a status based on color
 			boxList[i] = raphObject.rect(px, py, pw, ph)
 				.attr('fill', '#aaaaaa');
 			
@@ -135,10 +139,12 @@
 			});
 			
 			//define relations and functions for moving and positioning
+			//move the boxes
 			boxList[i].drag(move_drag, move_start, move_up);
 			boxList[i].resizer = boxListDrag[i];
 			boxList[i].boxtext = boxListText[i];
 			
+			//resize the boxes
 			boxListDrag[i].drag(resize_drag, resize_start, resize_up);
 			boxListDrag[i].resizer = boxList[i];
 			boxListDrag[i].boxtext = boxListText[i];
