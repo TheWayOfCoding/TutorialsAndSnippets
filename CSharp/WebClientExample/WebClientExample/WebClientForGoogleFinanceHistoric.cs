@@ -157,9 +157,6 @@ namespace WebClientExample
                             tempStorageString = tempStorageString.Replace("\n", Environment.NewLine);
                         }
                     }
-
-                    //an alternative method (it appeared slower for me)
-                    //tempStorageString = webConnector.DownloadString(webpageUriString);
                 }
             }
 
