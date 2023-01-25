@@ -1,2 +1,2 @@
 # TutorialsAndSnippets
-Tutorials and code snippets related to thewayofcoding.com
+Tutorials and code snippets related to TheWayOfCoding.com
